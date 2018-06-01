@@ -1,0 +1,8 @@
+SET FOREIGN_KEY_CHECKS=0;
+
+INSERT INTO `adapterbillerconfiguration` VALUES ('18', '7', 'http://localhost:8080/chip/test.php', 'purchase', 'form', 'get', 'command=top_up&requestid=TRX_ID&msisdn=SUBSCRIBER_NUMBER&productcode=PRODUCT_CODE&merchant=mopulsa', '{\"transid\":\"REFERENCE_NUMBER\",\"requestid\":\"TRX_ID\",\"statuscode\":\"PURCHASE_STATUS\"}', '6', null, '', null, null, null, null, null);
+INSERT INTO `adapterbillerconfiguration` VALUES ('20', '7', 'http://localhost:8080/chip/test2.php', 'advice', 'form', 'get', 'requestid=TRX_ID&transdate=TRX_DATE', '{\"transid\":\"REFERENCE_NUMBER\",\"requestid\":\"TRX_ID\",\"deliverycode\":\"PURCHASE_STATUS\",\"message\":\"PURCHASE_STATUS_DESC\"}', '6', null, '', null, null, null, null, null);
+
+INSERT INTO `biller` VALUES ('7', null, 'Chip Pulsa', '1', 'dika.atrariksa', '2017-08-28 11:11:21', null, null);
+
+SET FOREIGN_KEY_CHECKS=1;

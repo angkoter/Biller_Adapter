@@ -1,0 +1,125 @@
+#biller
+INSERT INTO `biller` VALUES ('6', 'JatelindoKartuHalo', '1', 'dika.atrariksa', '2017-07-14 15:50:46', null, null);
+
+#billerproduct
+INSERT INTO `billerproduct` VALUES ('064002', 'KartuHalo', '6', '1', '0.00', '064002', '0', 'dika.atrariksa', null, null, null);
+
+#Inquiry - billerstatusmapping
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '00', 'Sukses', '3001', 'Success', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '03', 'Invalid Merchant Type', '3000', 'Invalid Merchant Type', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '06', 'Unknown error', '3000', 'Unknown error', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '07', 'Transaksi gagal, Silahkan ulangi lagi', '3000', 'Transaksi gagal, Silahkan ulangi lagi', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '09', 'Request in progress', '3000', 'Request in progress', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '12', 'Invalid transaction', '3000', 'Invalid transaction', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '13', 'Application Server is down', '3000', 'Application Server is down', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '14', 'Unidentified/invalid Phone/ID number', '3000', 'Unidentified/invalid Phone/ID number', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '18', 'Request timeout', '3000', 'Request timeout', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '21', 'Unknown MTI / Jenis pesan tidak disupport oleh bil', '3000', 'Unknown MTI / Jenis pesan tidak disupport oleh bil', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '22', 'Unpaid transaction, jika pesan reversal dikirimkan tanpa pelunasan sebelumnya', '3000', 'Unpaid transaction, jika pesan reversal dikirimkan tanpa pelunasan sebelumnya', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '23', 'Seat already taken / not available.', '3000', 'Seat already taken / not available.', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '24', 'Cant cancel payment, ticket has been printed or ticket can’t be reversed.', '3000', 'Cant cancel payment, ticket has been printed or ticket can’t be reversed.', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '25', 'Cant update pax, ticket has been paid', '3000', 'Cant update pax, ticket has been paid', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '26', 'Data penumpang / pembeli tidak lengkap/invalid', '3000', 'Data penumpang / pembeli tidak lengkap/invalid', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '27', 'Jadwal tidak tersedia', '3000', 'Jadwal tidak tersedia', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '30', 'ISO packet composition failure', '3000', 'ISO packet composition failure', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '31', 'ID bank belum terdaftar', '3000', 'ID bank belum terdaftar', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '32', 'ID Switcher belum terdaftar', '3000', 'ID Switcher belum terdaftar', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '33', 'Kode biller/produk belum terdaftar', '3000', 'Kode biller/produk belum terdaftar', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '34', 'Transaksi sudah lunas', '3000', 'Transaksi sudah lunas', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '35', 'Sudah Terdaftar', '3000', 'Sudah Terdaftar', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '43', 'blocked/expired phone number', '3000', 'blocked/expired phone number', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '44', 'Voucher out of stock', '3000', 'Voucher out of stock', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '45', 'No Virtual Account tidak sesuai', '3000', 'No Virtual Account tidak sesuai', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '46', 'Jumlah Biaya Tidak Sesuai', '3000', 'Jumlah Biaya Tidak Sesuai', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '47', 'Format Tanggal Tidak Sesuai', '3000', 'Format Tanggal Tidak Sesuai', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '48', 'Maksimal Pembayaran 12 bulan kedepan', '3000', 'Maksimal Pembayaran 12 bulan kedepan', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '49', 'No Virtual Account tidak terdaftar', '3000', 'No Virtual Account tidak terdaftar', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '51', 'Jumlah Tagihan yang dibayarkan tidak sesuai', '3000', 'Jumlah Tagihan yang dibayarkan tidak sesuai', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '58', 'Transaction not permitted to terminal', '3000', 'Transaction not permitted to terminal', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '61', 'Deposit tidak mencukupi/invalid', '3000', 'Deposit tidak mencukupi/invalid', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '73', 'Unable to route transaction', '3000', 'Unable to route transaction', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '88', 'Too close to previous transactions', '3000', 'Too close to previous transactions', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '90', 'Cut-off is in process', '3000', 'Cut-off is in process', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '96', 'System malfunction', '3000', 'System malfunction', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '1', '98', 'Invalid reference number', '3000', 'Invalid reference number', 'dika.atrariksa', null, null, null);
+
+#purchase - billerstatusmapping
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '00', 'Sukses', '3001', 'Success', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '03', 'Invalid Merchant Type', '3000', 'Invalid Merchant Type', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '06', 'Unknown error', '3000', 'Unknown error', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '07', 'Transaksi gagal, Silahkan ulangi lagi', '3000', 'Transaksi gagal, Silahkan ulangi lagi', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '09', 'Request in progress', '3000', 'Request in progress', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '12', 'Invalid transaction', '3000', 'Invalid transaction', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '13', 'Application Server is down', '3000', 'Application Server is down', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '14', 'Unidentified/invalid Phone/ID number', '3000', 'Unidentified/invalid Phone/ID number', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '18', 'Request timeout', '3000', 'Request timeout', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '21', 'Unknown MTI / Jenis pesan tidak disupport oleh bil', '3000', 'Unknown MTI / Jenis pesan tidak disupport oleh bil', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '22', 'Unpaid transaction, jika pesan reversal dikirimkan tanpa pelunasan sebelumnya', '3000', 'Unpaid transaction, jika pesan reversal dikirimkan tanpa pelunasan sebelumnya', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '23', 'Seat already taken / not available.', '3000', 'Seat already taken / not available.', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '24', 'Cant cancel payment, ticket has been printed or ticket can’t be reversed.', '3000', 'Cant cancel payment, ticket has been printed or ticket can’t be reversed.', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '25', 'Cant update pax, ticket has been paid', '3000', 'Cant update pax, ticket has been paid', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '26', 'Data penumpang / pembeli tidak lengkap/invalid', '3000', 'Data penumpang / pembeli tidak lengkap/invalid', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '27', 'Jadwal tidak tersedia', '3000', 'Jadwal tidak tersedia', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '30', 'ISO packet composition failure', '3000', 'ISO packet composition failure', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '31', 'ID bank belum terdaftar', '3000', 'ID bank belum terdaftar', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '32', 'ID Switcher belum terdaftar', '3000', 'ID Switcher belum terdaftar', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '33', 'Kode biller/produk belum terdaftar', '3000', 'Kode biller/produk belum terdaftar', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '34', 'Transaksi sudah lunas', '3000', 'Transaksi sudah lunas', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '35', 'Sudah Terdaftar', '3000', 'Sudah Terdaftar', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '43', 'blocked/expired phone number', '3000', 'blocked/expired phone number', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '44', 'Voucher out of stock', '3000', 'Voucher out of stock', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '45', 'No Virtual Account tidak sesuai', '3000', 'No Virtual Account tidak sesuai', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '46', 'Jumlah Biaya Tidak Sesuai', '3000', 'Jumlah Biaya Tidak Sesuai', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '47', 'Format Tanggal Tidak Sesuai', '3000', 'Format Tanggal Tidak Sesuai', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '48', 'Maksimal Pembayaran 12 bulan kedepan', '3000', 'Maksimal Pembayaran 12 bulan kedepan', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '49', 'No Virtual Account tidak terdaftar', '3000', 'No Virtual Account tidak terdaftar', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '51', 'Jumlah Tagihan yang dibayarkan tidak sesuai', '3000', 'Jumlah Tagihan yang dibayarkan tidak sesuai', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '58', 'Transaction not permitted to terminal', '3000', 'Transaction not permitted to terminal', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '61', 'Deposit tidak mencukupi/invalid', '3000', 'Deposit tidak mencukupi/invalid', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '73', 'Unable to route transaction', '3000', 'Unable to route transaction', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '88', 'Too close to previous transactions', '3000', 'Too close to previous transactions', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '90', 'Cut-off is in process', '3000', 'Cut-off is in process', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '96', 'System malfunction', '3000', 'System malfunction', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '2', '98', 'Invalid reference number', '3000', 'Invalid reference number', 'dika.atrariksa', null, null, null);
+
+#advice - billerstatusmapping
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '00', 'Sukses', '3001', 'Success', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '03', 'Invalid Merchant Type', '3000', 'Invalid Merchant Type', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '06', 'Unknown error', '3000', 'Unknown error', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '07', 'Transaksi gagal, Silahkan ulangi lagi', '3000', 'Transaksi gagal, Silahkan ulangi lagi', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '09', 'Request in progress', '3000', 'Request in progress', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '12', 'Invalid transaction', '3000', 'Invalid transaction', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '13', 'Application Server is down', '3000', 'Application Server is down', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '14', 'Unidentified/invalid Phone/ID number', '3000', 'Unidentified/invalid Phone/ID number', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '18', 'Request timeout', '3000', 'Request timeout', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '21', 'Unknown MTI / Jenis pesan tidak disupport oleh bil', '3000', 'Unknown MTI / Jenis pesan tidak disupport oleh bil', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '22', 'Unpaid transaction, jika pesan reversal dikirimkan tanpa pelunasan sebelumnya', '3000', 'Unpaid transaction, jika pesan reversal dikirimkan tanpa pelunasan sebelumnya', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '23', 'Seat already taken / not available.', '3000', 'Seat already taken / not available.', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '24', 'Cant cancel payment, ticket has been printed or ticket can’t be reversed.', '3000', 'Cant cancel payment, ticket has been printed or ticket can’t be reversed.', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '25', 'Cant update pax, ticket has been paid', '3000', 'Cant update pax, ticket has been paid', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '26', 'Data penumpang / pembeli tidak lengkap/invalid', '3000', 'Data penumpang / pembeli tidak lengkap/invalid', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '27', 'Jadwal tidak tersedia', '3000', 'Jadwal tidak tersedia', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '30', 'ISO packet composition failure', '3000', 'ISO packet composition failure', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '31', 'ID bank belum terdaftar', '3000', 'ID bank belum terdaftar', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '32', 'ID Switcher belum terdaftar', '3000', 'ID Switcher belum terdaftar', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '33', 'Kode biller/produk belum terdaftar', '3000', 'Kode biller/produk belum terdaftar', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '34', 'Transaksi sudah lunas', '3000', 'Transaksi sudah lunas', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '35', 'Sudah Terdaftar', '3000', 'Sudah Terdaftar', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '43', 'blocked/expired phone number', '3000', 'blocked/expired phone number', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '44', 'Voucher out of stock', '3000', 'Voucher out of stock', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '45', 'No Virtual Account tidak sesuai', '3000', 'No Virtual Account tidak sesuai', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '46', 'Jumlah Biaya Tidak Sesuai', '3000', 'Jumlah Biaya Tidak Sesuai', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '47', 'Format Tanggal Tidak Sesuai', '3000', 'Format Tanggal Tidak Sesuai', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '48', 'Maksimal Pembayaran 12 bulan kedepan', '3000', 'Maksimal Pembayaran 12 bulan kedepan', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '49', 'No Virtual Account tidak terdaftar', '3000', 'No Virtual Account tidak terdaftar', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '51', 'Jumlah Tagihan yang dibayarkan tidak sesuai', '3000', 'Jumlah Tagihan yang dibayarkan tidak sesuai', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '58', 'Transaction not permitted to terminal', '3000', 'Transaction not permitted to terminal', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '61', 'Deposit tidak mencukupi/invalid', '3000', 'Deposit tidak mencukupi/invalid', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '73', 'Unable to route transaction', '3000', 'Unable to route transaction', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '88', 'Too close to previous transactions', '3000', 'Too close to previous transactions', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '90', 'Cut-off is in process', '3000', 'Cut-off is in process', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '96', 'System malfunction', '3000', 'System malfunction', 'dika.atrariksa', null, null, null);
+INSERT INTO `billerstatusmapping` VALUES ('6', '3', '98', 'Invalid reference number', '3000', 'Invalid reference number', 'dika.atrariksa', null, null, null);
+
+#merchantbillerproduct
+INSERT INTO `merchantbillerproduct` VALUES ('4', 'KartuHalo', '064002', '6', '0', '0.00', '0.00', '0.00', '0.00', '0.00', 'RP', 'RP', 'RP', 'RP', 'RP', '1', '1', '1', '0', 'dika.atrariksa', '2017-07-14 17:13:36', null, null);
