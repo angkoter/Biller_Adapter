@@ -97,10 +97,9 @@ public class PurchaseSarindo extends UntypedActor {
 				// mapping response template
 				String stringMappingResponse = mappingResponse.xmlToJson(stringResponseBiller,
 						complementMap.get("ResponseParam").toString());
-				HashMap<String, Object> mapResponseCoreParam = m.readValue(stringMappingResponse, HashMap.class);
+//				HashMap<String, Object> mapResponseCoreParam = m.readValue(stringMappingResponse, HashMap.class);
 				
 				// set bill_info
-				
 				HashMap<String, Object> mapResponseToCore = m.readValue(stringMappingResponse, HashMap.class);
 				try {
 					HashMap<String, Object> paramsBillingAPI = new HashMap<>();
@@ -109,7 +108,7 @@ public class PurchaseSarindo extends UntypedActor {
 					paramsBillingAPI.put(RequestParameter.REQUEST_TYPE, "2");
 					paramsBillingAPI.put(RequestParameter.PRODUCT_CODE, coreParamMap.get(RequestParameter.PRODUCT_CODE));
 					paramsBillingAPI.put(RequestParameter.PURCHASE_STATUS, mapResponseToCore.get(RequestParameter.PURCHASE_STATUS).toString());
-					paramsBillingAPI.put(RequestParameter.TOTAL_TRX_AMOUNT, coreParamMap.get("TOTAL_AMOUNT"));
+					paramsBillingAPI.put(RequestParameter.TOTAL_TRX_AMOUNT, coreParamMap.get("TOTAL_TRX_AMOUNT"));
 					paramsBillingAPI.put(RequestParameter.TRX_DETAIL_RESULT, stringResponseBiller);
 					HashMap<String, Object> billInfo = null;
 						billInfo = billingAPIHitter.getBillInfo(paramsBillingAPI );
@@ -124,12 +123,12 @@ public class PurchaseSarindo extends UntypedActor {
 				//--------------------------------------------
 				// set bill info end
 				// mapping response template end
-				if(mapResponseCoreParam.get("REFERENCE_NUMBER")!=null){
-					if (mapResponseCoreParam.get("REFERENCE_NUMBER").equals(billerTrxId)) {
-						mapResponseCoreParam.put("REFERENCE_NUMBER", reqTrxId);
+				if(mapResponseToCore.get("REFERENCE_NUMBER")!=null){
+					if (mapResponseToCore.get("REFERENCE_NUMBER").equals(billerTrxId)) {
+						mapResponseToCore.put("REFERENCE_NUMBER", reqTrxId);
 					}	
 				}else {
-					mapResponseCoreParam.put("REFERENCE_NUMBER", reqTrxId);
+					mapResponseToCore.put("REFERENCE_NUMBER", reqTrxId);
 				}
 				stringMappingResponse=m.writeValueAsString(mapResponseToCore);
 				logger.debug(TAG + "Response to Core : " + stringMappingResponse);

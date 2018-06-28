@@ -25,6 +25,7 @@ public class PurchaseMaster extends UntypedActor {
 	private ActorRef purchaseConsumer;
 	private ActorRef purchaseSarindo;
 	private ActorRef purchaseXlink;
+	private ActorRef purchaseKisel;
 	
 	public PurchaseMaster (AdapterSettings as,
 							Map<String, Map<String, Map<String, Object>>> adapterBillerConfiguration,
@@ -58,9 +59,12 @@ public class PurchaseMaster extends UntypedActor {
 			purchaseSarindo = getContext().actorOf(new RoundRobinPool(Integer.valueOf(as.getPurchaseEachActorWorker())).props(Props.create(PurchaseSarindo.class,adapterBillerConfiguration, system, as)), "PurchaseSarindo");
 			logger.info("[PurchaseMaster] Starting PURCHASEXLINK..");
 			purchaseXlink = getContext().actorOf(new RoundRobinPool(Integer.valueOf(as.getPurchaseEachActorWorker())).props(Props.create(PurchaseXlink.class,adapterBillerConfiguration, system, as)), "PurchaseXlink");
+			logger.info("[PurchaseMaster] Starting PURCHASEKISEL..");
+			purchaseKisel = getContext().actorOf(new RoundRobinPool(Integer.valueOf(as.getPurchaseEachActorWorker())).props(Props.create(PurchaseKisel.class,adapterBillerConfiguration, system, as)), "PurchaseKisel");
 
 			actorMap.put("sarindo", purchaseSarindo);
 			actorMap.put("xlink", purchaseXlink);
+			actorMap.put("kisel", purchaseKisel);
 			
 			logger.info("[PurchaseMaster] Starting PurchaseHandler..");
 			purchaseHandler = getContext().actorOf(new RoundRobinPool(actorMap.size() * Integer.valueOf(as.getPurchaseEachActorWorker())).props(Props.create(PurchaseHandler.class,  adapterBillerConfiguration, system, actorMap)), "PurchaseHandler");

@@ -1,4 +1,4 @@
-package com.glonation.biller.actors.purchase;
+package com.glonation.biller.actors.advice;
 
 import java.io.IOException;
 import java.io.StringReader;
@@ -39,8 +39,8 @@ import akka.camel.Camel;
 import akka.camel.CamelExtension;
 import akka.camel.CamelMessage;
 
-public class PurchaseXlink extends UntypedActor {
-	private static final Logger logger = LoggerFactory.getLogger(PurchaseSarindo.class);
+public class AdviceXlink extends UntypedActor {
+	private static final Logger logger = LoggerFactory.getLogger(AdviceXlink.class);
 	private String workerId = getSelf().path().name();
 	private String TAG = "[" + this.getClass().getSimpleName() + "-" + workerId + "] ";
 	private Map<String, Map<String, Map<String, Object>>> abc;
@@ -53,7 +53,7 @@ public class PurchaseXlink extends UntypedActor {
 	private Hitter hitter;
 	private AdapterSettings as;
 
-	public PurchaseXlink(Map<String, Map<String, Map<String, Object>>> abc, ActorSystem system, AdapterSettings as) {
+	public AdviceXlink(Map<String, Map<String, Map<String, Object>>> abc, ActorSystem system, AdapterSettings as) {
 		this.as = as;
 		this.abc = abc;
 		this.system = system;
@@ -80,10 +80,9 @@ public class PurchaseXlink extends UntypedActor {
 				complementMap = (HashMap<String, Object>) abc.get(billerId).get("purchase");
 				String reqTrxId = coreParamMap.get("TRX_ID").toString();
 				IDGenerator idGenerator = new IDGenerator();
-				String billerTrxId = idGenerator.generateId(billerId, reqTrxId, 12);
+				String billerTrxId = idGenerator.getBillerTrxId(reqTrxId, as);
 				if (billerTrxId.equals("") || billerTrxId == null) {
 				} else {
-					idGenerator.saveBillerTrxId(reqTrxId, billerTrxId, as);
 					coreParamMap.put("TRX_ID", billerTrxId);
 				}
 				logger.debug(TAG + "BillerId : " + billerId + ", CORE TRX_ID : " + reqTrxId + ", Biller TRX_ID : "
@@ -130,10 +129,10 @@ public class PurchaseXlink extends UntypedActor {
 					HashMap<String, Object> paramsBillingAPI = new HashMap<>();
 					paramsBillingAPI.put(RequestParameter.ADMIN_FEE, coreParamMap.get(RequestParameter.ADMIN_FEE));
 					paramsBillingAPI.put(RequestParameter.BILLER_ID, billerId);
-					paramsBillingAPI.put(RequestParameter.REQUEST_TYPE, "2");
+					paramsBillingAPI.put(RequestParameter.REQUEST_TYPE, "3");
 					paramsBillingAPI.put(RequestParameter.PRODUCT_CODE, coreParamMap.get(RequestParameter.PRODUCT_CODE));
 					paramsBillingAPI.put(RequestParameter.PURCHASE_STATUS, mapResponseToCore.get(RequestParameter.PURCHASE_STATUS).toString());
-					paramsBillingAPI.put(RequestParameter.TOTAL_TRX_AMOUNT, coreParamMap.get("TOTAL_TRX_AMOUNT"));
+					paramsBillingAPI.put(RequestParameter.TOTAL_TRX_AMOUNT, coreParamMap.get("TOTAL_AMOUNT"));
 					paramsBillingAPI.put(RequestParameter.TRX_DETAIL_RESULT, stringResponseBiller);
 					HashMap<String, Object> billInfo = null;
 						billInfo = billingAPIHitter.getBillInfo(paramsBillingAPI );

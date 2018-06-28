@@ -238,7 +238,11 @@
 		<!-- <artifactId>AgaisLibrary</artifactId> -->
 		<!-- <version>1.0</version> -->
 		<!-- </dependency> -->
-
+		<dependency>
+			<groupId>com.glonation.mapper</groupId>
+			<artifactId>mapper</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 
 		<dependency>
 			<groupId>commons-codec</groupId>

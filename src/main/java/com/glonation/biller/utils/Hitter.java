@@ -113,7 +113,7 @@ public class Hitter {
 			Request r = new Request.Builder().url(urlBiller).post(body).build();
 			Response response = okHttpClient.newCall(r).execute();
 			responseBiller = response.body().string();
-			logger.debug(TAG + "hit to : "+urlBiller+"response code : " + response.code());
+			logger.debug(TAG + "hit to : "+urlBiller+" response code : " + response.code());
 
 		} catch (Exception e) {
 			logger.error(TAG + "Fail to get reaponse : " + e.getMessage());

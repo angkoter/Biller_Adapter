@@ -58,7 +58,6 @@ public class PurchaseHandler extends UntypedActor {
 			String billerId = prcMap.get("SWITCHING_BILLER_ID").toString();
 
 			ActorRef act = actorMap.get(abc.get(billerId).get("purchase").get("RequestActor").toString());
-
 			act.forward(message, getContext());
 			logger.debug("|Performance|BillerAdapter|PurchaseHandler|1|Purchase|ORDER_ID:" + "" + "|TRX_ID:"
 					+ prcMap.get("TRX_ID"));

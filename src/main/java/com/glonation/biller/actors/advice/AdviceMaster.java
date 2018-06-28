@@ -25,6 +25,8 @@ public class AdviceMaster extends UntypedActor {
 	private ActorRef adviceHandler;
 	private ActorRef adviceConsumer;
 	private ActorRef adviceSarindo;
+	private ActorRef adviceXlink;
+	private ActorRef adviceKisel;
 	public AdviceMaster (AdapterSettings as,
 						Map<String, Map<String, Map<String, Object>>> adapterBillerConfiguration,
 						ActorSystem system) {
@@ -55,8 +57,16 @@ public class AdviceMaster extends UntypedActor {
 			
 			logger.info("[PurchaseMaster] Starting ADVICESARINDO..");
 			adviceSarindo = getContext().actorOf(new RoundRobinPool(Integer.valueOf(as.getPurchaseEachActorWorker())).props(Props.create(AdviceSarindo.class,adapterBillerConfiguration, system, as)), "AdviceSarindo");
+			
+			logger.info("[PurchaseMaster] Starting ADVICEXLINK..");
+			adviceXlink = getContext().actorOf(new RoundRobinPool(Integer.valueOf(as.getPurchaseEachActorWorker())).props(Props.create(AdviceXlink.class,adapterBillerConfiguration, system, as)), "AdviceXlink");
+			
+			logger.info("[PurchaseMaster] Starting ADVICEKISEL..");
+			adviceKisel = getContext().actorOf(new RoundRobinPool(Integer.valueOf(as.getPurchaseEachActorWorker())).props(Props.create(AdviceKisel.class,adapterBillerConfiguration, system, as)), "AdviceKisel");
 
 			actorMap.put("sarindo", adviceSarindo);
+			actorMap.put("xlink", adviceXlink);
+			actorMap.put("kisel", adviceKisel);
 			
 			logger.info("[AdviceMaster] Starting PurchaseHandler..");
 			adviceHandler = getContext().actorOf(new RoundRobinPool(actorMap.size() * Integer.valueOf(as.getAdviceEachActorWorker())).props(Props.create(AdviceHandler.class, adapterBillerConfiguration, system, actorMap)), "AdviceHandler");
